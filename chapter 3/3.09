@@ -1,0 +1,88 @@
+#include<iostream>
+#include<string>
+using namespace std;
+class C5_Bank{
+	private:
+	int account;
+	public:
+	 C5_Bank(int a){//constractor
+	 account=a;	
+	 cout<<"======================\n";
+	 cout<<"Welcome to 5C Bank\n";
+	 cout<<"======================\n";
+	 menu();
+	 }
+	widraw(){//to witdraw amount
+	int a;
+	cout<<"Enter amount to widraw:";
+	cin>>a;
+	if(a>=1000 && a<=25000){
+			account=account-a;
+			cout<<"===========================================================\n";
+				cout<<"You have widraw a account of "<<a<<" from your account \n";
+			cout<<"===========================================================\n";	
+				menu();
+		
+		}else{
+			cout<<"=======================================\n";
+			cout<<"You are volating the deposit policy\n";
+			cout<<"Please deposit between 1000 to 25000\n";
+			cout<<"========================================\n";
+		}
+		menu();
+	
+	
+	}
+	Deposit(){
+		int a;
+		cout<<"Please enter amount to deposit:";
+		cin>>a;
+		if(a>=500 && a<=500){
+			account=account+a;
+			cout<<"===========================================================\n";
+			cout<<"You depsoit an amount "<<a<<" in your account \n";
+			cout<<"===========================================================\n";
+			menu();
+		}else{
+			cout<<"========================================\n";
+			cout<<"You are volating the deposit policy\n";
+			cout<<"Please deposit between 500 to 5 lakh\n";
+			cout<<"========================================\n";
+		}
+		
+		menu();
+	}
+	check_balance(){
+		cout<<"=========================================\n";
+		cout<<"Your Total Balance is: "<<account<<endl;
+		cout<<"========================================\n";
+		menu();
+	}
+	menu(){
+		int a;
+		cout<<"Please enter 1 for Check Balance\n";
+		cout<<"Please enter 2 for Cash Deposit\n";
+		cout<<"Please enter 3 for Cash widraw\n";
+cin>>a;
+if(a==1){
+check_balance();
+menu();
+}else if(a==2){
+Deposit();
+menu();
+}else if(a==3){
+	widraw();
+	menu();
+}
+else{
+	cout<<"Invalid Entry!\n";
+	cout<<"Select option from given numbers\n";
+	menu();
+}
+	}
+
+};
+main(){
+	C5_Bank obj(10000);
+		
+}
