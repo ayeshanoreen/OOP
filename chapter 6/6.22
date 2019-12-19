@@ -1,0 +1,18 @@
+#include<iostream>
+using namespace std;
+rectangle(int a, int b){
+	for(int i=0;i<a;i++){
+		cout<<" * ";
+	}
+	for(int j=0;j<b;j++){
+		cout<<"\n * ";
+	}
+}
+int main(){
+	int c,d;
+	cout<<"Enter height of rectangle: \n";
+	cin>>c;
+	cout<<"Enter weidht of rectangle: \n";
+	cin>>d;
+	rectangle(d,c);
+}
