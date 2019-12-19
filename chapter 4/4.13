@@ -1,0 +1,27 @@
+#include<iostream>
+using namespace std;
+
+
+main(){
+	
+	
+	float km,fuel,kmltr,fuelsum,kmsum,did;
+	
+	cout<<"Enter KM driven (-1 to quit): ";
+	cin>>km;
+	while(km != -1){
+	
+	cout<<"Enter liter used: ";
+	cin>>fuel;
+	kmltr=km/fuel;
+	cout<<"Kms per liter this trip: "<<kmltr<<endl;
+	fuelsum=fuelsum+fuel;
+	kmsum=kmsum+km;
+	did=kmsum/fuelsum;
+	cout<<"Total KMs per liter: "<<did<<endl;
+	cout<<"\n";
+	cout<<"Enter KM driven (-1 to quit): ";
+	cin>>km;
+	}
+	
+}
