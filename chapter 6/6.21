@@ -1,0 +1,17 @@
+#include<iostream>
+using namespace std;
+three(int a){
+	if(a%3==0){
+		cout<<"TRUE"<<endl;
+	}
+	else{
+		cout<<"FALSE";
+	}
+}
+int main(){
+	int b;
+	cout<<"Enter a integer: "<<endl;
+	cin>>b;
+	three(b);
+	
+	}
